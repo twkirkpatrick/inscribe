@@ -4,7 +4,7 @@ var path = require("path");
 
 // Sets up the Express App
 var app = express();
-var PORT = process.env.PORT || 8000;
+var PORT = 8050;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -17,13 +17,11 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
-app.get("/reserve", function(req, res) {
-  res.sendFile(path.join(__dirname, "add.html"));
+app.get("/notes", function(req, res) {
+  res.sendFile(path.join(__dirname, "public/notes.html"));
 });
 
-app.get("/tables", function(req, res) {
-    res.sendFile(path.join(__dirname, "table.html"));
-  });
+
   
 
 
