@@ -1,8 +1,9 @@
 // Dependencies
-var http = require("http");
-var express = require("express");
-var path = require("path");
+const http = require("http");
+const express = require("express");
+const path = require("path");
 const fs = require("fs");
+const uuid = require("uuid");
 
 // Sets up the Express App
 var app = express();
@@ -48,7 +49,11 @@ app.get("/api/notes", function(req, res) {
 
 
 app.post("/api/notes", function(req, res) {
-    var newNote = req.body;
+    var newNote = {
+      title: req.body.title,
+      text: req.body.text,
+      id: uuid.v4()
+    }
     console.log(newNote);
   
     fs.readFile("Develop/db/db.json", (err, data) => {
