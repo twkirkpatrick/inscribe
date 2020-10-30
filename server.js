@@ -61,7 +61,7 @@ app.post("/api/notes", function(req, res) {
       json.push(newNote);
       fs.writeFile("Develop/db/db.json", JSON.stringify(json), err => {
         if(err) throw err;
-        res.json("completed");
+        res.send("Note saved!");
       })
     })
     
@@ -79,7 +79,7 @@ app.post("/api/notes", function(req, res) {
       var remove = parsed.filter(note => note.id !== uniqueId)
       fs.writeFile("Develop/db/db.json", JSON.stringify(remove), err => {
         if(err) throw err;
-        res.send("Successfully deleted!");
+        res.send("Note deleted!");
       })
 
 
