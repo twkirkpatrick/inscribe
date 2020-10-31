@@ -23,10 +23,30 @@ h4{
   color: white;
 }
 
+/* .animate__animated.animate__fadeIn{
+  --animate-delay: 0.2s;
+} */
+
 .jumbotron{
   margin-top: 140px !important;
   border-radius: 1rem;
   background-color: #11b8ce6e;
+}
+
+.btns{
+  transition: .2s ease-in !important;
+}
+
+.btns:hover{
+  transform: scale(1.1) !important;
+}
+
+.btns-2{
+  transition:.2s ease-in;
+}
+
+.btns-2:hover{
+  transform:scale(1.2);
 }
 
 .logo{
