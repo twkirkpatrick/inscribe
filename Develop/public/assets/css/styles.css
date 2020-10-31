@@ -4,8 +4,53 @@ html, body {
   padding: 0;
 }
 
+body{
+  background-color: #343a40 !important;
+  color: white !important;
+}
+
 .save-note {
   display: none;
+}
+
+h1{
+  font-size: 35px !important;
+  color: white;
+}
+
+h4{
+  font-size: 14px !important;
+  color: white;
+}
+
+.jumbotron{
+  margin-top: 140px !important;
+  border-radius: 1rem;
+  background-color: #11b8ce6e;
+}
+
+.logo{
+  margin-left: 6px;
+}
+
+.new-note{
+  color: #4bbf73 !important;
+}
+
+.save-note{
+  color: #4bbf73 !important;
+}
+
+.sidebar{
+ background-color: #11b8ce6e;
+}
+
+.list-group, .list-group-item{
+  background-color: #11b8ce6e;
+}
+
+.navbar{
+  background-color: #11b8ce6e !important;
 }
 
 .icons i {
@@ -16,26 +61,34 @@ html, body {
 }
 
 .note-textarea, .note-title {
-  color: #000000;
+  color: white;
   width: 100%;
   outline: none;
   border: none;
+  background-color: #343a40 !important
 }
 
 .note-textarea {
   resize: none;
   height: calc(100% - 63px);
   padding-top: 15px;
+  background-color: #757575;
+}
+
+::placeholder{
+  color: rgb(208, 209, 200);
 }
 
 .note-title {
   height: 50px;
   margin-top: 13px;
   font-size: 3rem;
+  background-color: #757575;
+  
 }
 
 .note-title:read-only, .note-textarea:read-only {
-  color: #757575;
+  color: white;
 }
 
 .list-container .card {

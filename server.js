@@ -82,26 +82,10 @@ app.post("/api/notes", function(req, res) {
         res.send("Note deleted!");
       })
 
-
-      
     })
-    // should receive a query parameter containing the id of a note to delete.
-    // Find a way to give each note a unique ID when saved
-    // In order to delete a note, you'll need to read all notes from db.json
-    // Remove note with the given id property
-    // rewrite the notes to the db.json file
+   
   }); 
  
-
-  
-
-
-
-
-
-
-
-
 
 
 
