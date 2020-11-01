@@ -9,18 +9,13 @@ const uuid = require("uuid");
 var app = express();
 var PORT = 8050;
 
- 
-
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'Develop/public')));
 
-
-
-
-// Routes
+// Main Routes
 // =============================================================
 
 app.get("/", function(req, res) {
@@ -39,22 +34,19 @@ app.get("/notes", function(req, res) {
 app.get("/api/notes", function(req, res) {
   fs.readFile("Develop/db/db.json", (err, data) => {
     if (err){
-      
       throw err;
     }
-    
     res.json(JSON.parse(data));
   })
 });
 
 
-app.post("/api/notes", function(req, res) {
+app.post("/api/notes",(req, res) => {
     var newNote = {
       title: req.body.title,
       text: req.body.text,
       id: uuid.v4()
     }
-    console.log(newNote);
   
     fs.readFile("Develop/db/db.json", (err, data) => {
       var json = JSON.parse(data);
@@ -67,10 +59,9 @@ app.post("/api/notes", function(req, res) {
     
 })
 
- 
 
-   app.delete("/api/notes/:id", function(req, res){
-
+   app.delete("/api/notes/:id", (req, res) => {
+    
     var uniqueId = req.params.id;
 
     fs.readFile("Develop/db/db.json", (err, data) => {
@@ -86,8 +77,6 @@ app.post("/api/notes", function(req, res) {
    
   }); 
  
-
-
 
 // Starts the server to begin listening
 // =============================================================
