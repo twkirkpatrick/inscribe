@@ -6,8 +6,8 @@ const fs = require("fs");
 const uuid = require("uuid");
 
 // Sets up the Express App
-var app = express();
-var PORT = process.env.PORT || 8050;
+const app = express();
+const PORT = process.env.PORT || 8050;
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -44,14 +44,14 @@ app.get("/api/notes", function(req, res) {
 //Unique id is added to object using the uuid package which generates a random ID
 //newNote object is pushed into original array, and is written to the db.json file
 app.post("/api/notes",(req, res) => {
-    var newNote = {
+    const newNote = {
       title: req.body.title,
       text: req.body.text,
       id: uuid.v4()
     }
   
     fs.readFile("Develop/db/db.json", (err, data) => {
-      var json = JSON.parse(data);
+      const json = JSON.parse(data);
       json.push(newNote);
       fs.writeFile("Develop/db/db.json", JSON.stringify(json), err => {
         if(err) throw err;
@@ -66,12 +66,12 @@ app.post("/api/notes",(req, res) => {
 //Write new array to db.json file
    app.delete("/api/notes/:id", (req, res) => {
     
-    var uniqueId = req.params.id;
+    const uniqueId = req.params.id;
 
     fs.readFile("Develop/db/db.json", (err, data) => {
 
-      var parsed = JSON.parse(data)
-      var remove = parsed.filter(note => note.id !== uniqueId)
+      const parsed = JSON.parse(data)
+      const remove = parsed.filter(note => note.id !== uniqueId)
       fs.writeFile("Develop/db/db.json", JSON.stringify(remove), err => {
         if(err) throw err;
         res.send("Note deleted!");
