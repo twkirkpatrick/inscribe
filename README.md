@@ -1,4 +1,5 @@
 # Inscribe Note Taker 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 With the Inscribe Note Taker, users are able to save, retrieve, and delete persistent notes at their convenience.  This is made possible by Node.js, Express, and server-side functionality.
 
 <a href="https://inscribe-notes.herokuapp.com/" target="_blank">Demo the deployed app here</a>
@@ -7,8 +8,6 @@ With the Inscribe Note Taker, users are able to save, retrieve, and delete persi
 AS A user, I want to be able to write and save notes <br>
 I WANT to be able to delete notes I've written before <br>
 SO THAT I can organize my thoughts and keep track of tasks I need to complete
-
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Table of Contents
 * [Installation](#installation)
