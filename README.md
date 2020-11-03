@@ -28,10 +28,12 @@ If you want to use the application on your local server:
 Otherwise, feel free to demo the deployed application <a href="https://inscribe-notes.herokuapp.com/" target="_blank">here</a>.
 
 ## Usage
-To use Inscribe, simply click in the text area labeled "Enter note title here..." and insert the title of your note.  Repeat the same process for the note text.  After the note text is inserted, a save button will appear in the top right corner.  Click the button to save the note to your list of notes in the sidebar.  To retrieve the note, simply click on the note in the sidebar.  To delete the note, click on the trash can icon next to the note in the sidebar. When viewing a note, click the "add" icon in the top right corner to add a new note to your list.
+To use Inscribe, simply click in the text area labeled "Enter note title here..." and insert the title of your note.  Repeat the same process for the note text.  After the note text is inserted, a save button will appear in the top right corner.  Click the button to save the note to your list of notes in the sidebar.  To retrieve the note, simply click on the note in the sidebar.  To delete the note, click on the trash can icon next to the note in the sidebar. When viewing a note, click the "add" icon in the top right corner to begin writing a new note.
 
+<img src = "Develop/images/root.png" alt="screenshot of inscribe">
 <img src = "Develop/images/note.png" alt="screenshot of inscribe">
 <img src = "Develop/images/view-note.png" alt="screenshot of inscribe">
+<img src = "Develop/images/save.png" alt="screenshot of inscribe">
 
 
 ## Resources
